@@ -3,7 +3,7 @@
 
 using namespace std;
 
-string image_file = "./distorted.png";   // 请确保路径正确
+string image_file = "../distorted.png";   // 请确保路径正确，因为是在build中运行，所以应该是上级目录。
 
 int main(int argc, char **argv) {
 
@@ -15,13 +15,13 @@ int main(int argc, char **argv) {
 
   cv::Mat image = cv::imread(image_file, 0);   // 图像是灰度图，CV_8UC1
   int rows = image.rows, cols = image.cols;
-  cv::Mat image_undistort = cv::Mat(rows, cols, CV_8UC1);   // 去畸变以后的图
+  cv::Mat image_undistort = cv::Mat(rows, cols, CV_8UC1);   // 定义规定好大小和类型的去畸变以后的图
 
   // 计算去畸变后图像的内容
-  for (int v = 0; v < rows; v++) {
-    for (int u = 0; u < cols; u++) {
+  for (int v = 0; v < rows; v++) { //v对应表示y
+    for (int u = 0; u < cols; u++) { //u对应表示x
       // 按照公式，计算点(u,v)对应到畸变图像中的坐标(u_distorted, v_distorted)
-      double x = (u - cx) / fx, y = (v - cy) / fy;
+      double x = (u - cx) / fx, y = (v - cy) / fy; //求解归一化坐标
       double r = sqrt(x * x + y * y);
       double x_distorted = x * (1 + k1 * r * r + k2 * r * r * r * r) + 2 * p1 * x * y + p2 * (r * r + 2 * x * x);
       double y_distorted = y * (1 + k1 * r * r + k2 * r * r * r * r) + p1 * (r * r + 2 * y * y) + 2 * p2 * x * y;

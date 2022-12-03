@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zzwa/sjtu/slam_zzwa/slam_zzwa/ch5/imageBasics
+CMAKE_SOURCE_DIR = /home/zzwa/sjtu/slam_legion/ch5/imageBasics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zzwa/sjtu/slam_zzwa/slam_zzwa/ch5/imageBasics/build
+CMAKE_BINARY_DIR = /home/zzwa/sjtu/slam_legion/ch5/imageBasics/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zzwa/sjtu/slam_zzwa/slam_zzwa/ch5/imageBasics/build/CMakeFiles /home/zzwa/sjtu/slam_zzwa/slam_zzwa/ch5/imageBasics/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zzwa/sjtu/slam_legion/ch5/imageBasics/build/CMakeFiles /home/zzwa/sjtu/slam_legion/ch5/imageBasics/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zzwa/sjtu/slam_zzwa/slam_zzwa/ch5/imageBasics/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zzwa/sjtu/slam_legion/ch5/imageBasics/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named imageBasics
+# Target rules for targets named undistortImage
 
 # Build rule for target.
-imageBasics: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 imageBasics
-.PHONY : imageBasics
+undistortImage: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 undistortImage
+.PHONY : undistortImage
 
 # fast build rule for target.
-imageBasics/fast:
-	$(MAKE) -f CMakeFiles/imageBasics.dir/build.make CMakeFiles/imageBasics.dir/build
-.PHONY : imageBasics/fast
+undistortImage/fast:
+	$(MAKE) -f CMakeFiles/undistortImage.dir/build.make CMakeFiles/undistortImage.dir/build
+.PHONY : undistortImage/fast
 
-imageBasics.o: imageBasics.cpp.o
+undistortImage.o: undistortImage.cpp.o
 
-.PHONY : imageBasics.o
+.PHONY : undistortImage.o
 
 # target to build an object file
-imageBasics.cpp.o:
-	$(MAKE) -f CMakeFiles/imageBasics.dir/build.make CMakeFiles/imageBasics.dir/imageBasics.cpp.o
-.PHONY : imageBasics.cpp.o
+undistortImage.cpp.o:
+	$(MAKE) -f CMakeFiles/undistortImage.dir/build.make CMakeFiles/undistortImage.dir/undistortImage.cpp.o
+.PHONY : undistortImage.cpp.o
 
-imageBasics.i: imageBasics.cpp.i
+undistortImage.i: undistortImage.cpp.i
 
-.PHONY : imageBasics.i
+.PHONY : undistortImage.i
 
 # target to preprocess a source file
-imageBasics.cpp.i:
-	$(MAKE) -f CMakeFiles/imageBasics.dir/build.make CMakeFiles/imageBasics.dir/imageBasics.cpp.i
-.PHONY : imageBasics.cpp.i
+undistortImage.cpp.i:
+	$(MAKE) -f CMakeFiles/undistortImage.dir/build.make CMakeFiles/undistortImage.dir/undistortImage.cpp.i
+.PHONY : undistortImage.cpp.i
 
-imageBasics.s: imageBasics.cpp.s
+undistortImage.s: undistortImage.cpp.s
 
-.PHONY : imageBasics.s
+.PHONY : undistortImage.s
 
 # target to generate assembly for a file
-imageBasics.cpp.s:
-	$(MAKE) -f CMakeFiles/imageBasics.dir/build.make CMakeFiles/imageBasics.dir/imageBasics.cpp.s
-.PHONY : imageBasics.cpp.s
+undistortImage.cpp.s:
+	$(MAKE) -f CMakeFiles/undistortImage.dir/build.make CMakeFiles/undistortImage.dir/undistortImage.cpp.s
+.PHONY : undistortImage.cpp.s
 
 # Help Target
 help:
@@ -157,11 +157,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... imageBasics"
+	@echo "... undistortImage"
 	@echo "... edit_cache"
-	@echo "... imageBasics.o"
-	@echo "... imageBasics.i"
-	@echo "... imageBasics.s"
+	@echo "... undistortImage.o"
+	@echo "... undistortImage.i"
+	@echo "... undistortImage.s"
 .PHONY : help
 
 

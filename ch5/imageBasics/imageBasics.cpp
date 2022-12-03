@@ -2,9 +2,15 @@
 #include <chrono>
 
 using namespace std;
+//可以使用 using namespace cv；这样后面就不用使用cv：：
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
 
-#include <opencv/core/core.hpp>
-#include <opencv/highgui/highgui.hpp>
+/*
+读取图像的另一种方法
+string path="../ubuntu.png";
+imgae = cv::imread(path);
+*/
 
 int main(int argc, char **argv) {
   // 读取argv[1]指定的图像
@@ -31,7 +37,7 @@ int main(int argc, char **argv) {
 
   // 遍历图像, 请注意以下遍历方式亦可使用于随机像素访问
   // 使用 std::chrono 来给算法计时
-  chrono::steady_clock::time_point t1 = chrono::steady_clock::now();
+  chrono::steady_clock::time_point t1 = chrono::steady_clock::now();  //计时算法
   for (size_t y = 0; y < image.rows; y++) {
     // 用cv::Mat::ptr获得图像的行指针
     unsigned char *row_ptr = image.ptr<unsigned char>(y);  // row_ptr是第y行的头指针
@@ -53,12 +59,16 @@ int main(int argc, char **argv) {
   cv::Mat image_another = image;
   // 修改 image_another 会导致 image 发生变化
   image_another(cv::Rect(0, 0, 100, 100)).setTo(0); // 将左上角100*100的块置零
+  /*
+  cv::Rect rect(100,50,20,30);//绘制了一个左上角坐标为(100,50),宽为20,高为30的矩形,注意100是列数,50是行数
+  注意,不包含120这一列,50这一行
+  */
   cv::imshow("image", image);
   cv::waitKey(0);
 
   // 使用clone函数来拷贝数据
   cv::Mat image_clone = image.clone();
-  image_clone(cv::Rect(0, 0, 100, 100)).setTo(255);
+  image_clone(cv::Rect(0, 0, 100, 100)).setTo(255);//修改克隆数据与原数据无关
   cv::imshow("image", image);
   cv::imshow("image_clone", image_clone);
   cv::waitKey(0);
@@ -66,4 +76,4 @@ int main(int argc, char **argv) {
   // 对于图像还有很多基本的操作,如剪切,旋转,缩放等,限于篇幅就不一一介绍了,请参看OpenCV官方文档查询每个函数的调用方法.
   cv::destroyAllWindows();
   return 0;
-}
+} 

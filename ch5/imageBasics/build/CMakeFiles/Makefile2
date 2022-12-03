@@ -54,45 +54,45 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zzwa/sjtu/slam_zzwa/slam_zzwa/ch5/imageBasics
+CMAKE_SOURCE_DIR = /home/zzwa/sjtu/slam_legion/ch5/imageBasics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zzwa/sjtu/slam_zzwa/slam_zzwa/ch5/imageBasics/build
+CMAKE_BINARY_DIR = /home/zzwa/sjtu/slam_legion/ch5/imageBasics/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/imageBasics.dir
+# Target rules for target CMakeFiles/undistortImage.dir
 
 # All Build rule for target.
-CMakeFiles/imageBasics.dir/all:
-	$(MAKE) -f CMakeFiles/imageBasics.dir/build.make CMakeFiles/imageBasics.dir/depend
-	$(MAKE) -f CMakeFiles/imageBasics.dir/build.make CMakeFiles/imageBasics.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zzwa/sjtu/slam_zzwa/slam_zzwa/ch5/imageBasics/build/CMakeFiles --progress-num=1,2 "Built target imageBasics"
-.PHONY : CMakeFiles/imageBasics.dir/all
+CMakeFiles/undistortImage.dir/all:
+	$(MAKE) -f CMakeFiles/undistortImage.dir/build.make CMakeFiles/undistortImage.dir/depend
+	$(MAKE) -f CMakeFiles/undistortImage.dir/build.make CMakeFiles/undistortImage.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zzwa/sjtu/slam_legion/ch5/imageBasics/build/CMakeFiles --progress-num=1,2 "Built target undistortImage"
+.PHONY : CMakeFiles/undistortImage.dir/all
 
 # Include target in all.
-all: CMakeFiles/imageBasics.dir/all
+all: CMakeFiles/undistortImage.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/imageBasics.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zzwa/sjtu/slam_zzwa/slam_zzwa/ch5/imageBasics/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/imageBasics.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zzwa/sjtu/slam_zzwa/slam_zzwa/ch5/imageBasics/build/CMakeFiles 0
-.PHONY : CMakeFiles/imageBasics.dir/rule
+CMakeFiles/undistortImage.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zzwa/sjtu/slam_legion/ch5/imageBasics/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/undistortImage.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zzwa/sjtu/slam_legion/ch5/imageBasics/build/CMakeFiles 0
+.PHONY : CMakeFiles/undistortImage.dir/rule
 
 # Convenience name for target.
-imageBasics: CMakeFiles/imageBasics.dir/rule
+undistortImage: CMakeFiles/undistortImage.dir/rule
 
-.PHONY : imageBasics
-
-# clean rule for target.
-CMakeFiles/imageBasics.dir/clean:
-	$(MAKE) -f CMakeFiles/imageBasics.dir/build.make CMakeFiles/imageBasics.dir/clean
-.PHONY : CMakeFiles/imageBasics.dir/clean
+.PHONY : undistortImage
 
 # clean rule for target.
-clean: CMakeFiles/imageBasics.dir/clean
+CMakeFiles/undistortImage.dir/clean:
+	$(MAKE) -f CMakeFiles/undistortImage.dir/build.make CMakeFiles/undistortImage.dir/clean
+.PHONY : CMakeFiles/undistortImage.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/undistortImage.dir/clean
 
 .PHONY : clean
 
