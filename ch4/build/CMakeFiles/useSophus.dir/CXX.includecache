@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/zzwa/sjtu/slam_zzwa/ch4/useSophus.cpp
+/home/zzwa/sjtu/slam_legion/ch4/useSophus.cpp
 iostream
 -
 cmath
@@ -16,7 +16,7 @@ eigen3/Eigen/Core
 eigen3/Eigen/Geometry
 -
 sophus/se3.hpp
-/home/zzwa/sjtu/slam_zzwa/ch4/sophus/se3.hpp
+/home/zzwa/sjtu/slam_legion/ch4/sophus/se3.hpp
 
 /usr/include/eigen3/Eigen/Cholesky
 Core
