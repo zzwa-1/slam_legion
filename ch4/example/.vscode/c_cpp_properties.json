@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/include/eigen3",
+                "/home/zzwa/software/Sophus/sophus"   //实验室电脑为"/home/zzwa/soft_ware/Sophus/sophus" 
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang-6.0",
+            "cStandard": "c17",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "linux-clang-x64"
+        }
+    ],
+    "version": 4
+}

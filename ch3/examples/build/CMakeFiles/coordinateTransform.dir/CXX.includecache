@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zzwa/sjtu/slam_zzwa/ch3/examples/coordinateTransform.cpp
+iostream
+-
+vector
+-
+algorithm
+-
+eigen3/Eigen/Core
+-
+eigen3/Eigen/Geometry
+-
+
