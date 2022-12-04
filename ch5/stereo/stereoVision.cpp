@@ -12,7 +12,7 @@ using namespace Eigen;
 string left_file = "./left.png";
 string right_file = "./right.png";
 
-// 在pangolin中画图，已写好，无需调整
+// 绘制点云图像，在pangolin中画图，已写好，无需调整
 void showPointCloud(
     const vector<Vector4d, Eigen::aligned_allocator<Vector4d>> &pointcloud);
 
