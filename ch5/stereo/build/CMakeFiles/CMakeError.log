@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/zzwa/sjtu/slam_legion/ch5/stereo/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ae89d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ae89d.dir/build.make CMakeFiles/cmTC_ae89d.dir/build
+make[1]: 进入目录“/home/zzwa/sjtu/slam_legion/ch5/stereo/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_ae89d.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_ae89d.dir/CheckSymbolExists.c.o   -c /home/zzwa/sjtu/slam_legion/ch5/stereo/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_ae89d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ae89d.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_ae89d.dir/CheckSymbolExists.c.o  -o cmTC_ae89d 
+CMakeFiles/cmTC_ae89d.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x1b)：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_ae89d.dir/build.make:97: recipe for target 'cmTC_ae89d' failed
+make[1]: *** [cmTC_ae89d] Error 1
+make[1]: 离开目录“/home/zzwa/sjtu/slam_legion/ch5/stereo/build/CMakeFiles/CMakeTmp”
+Makefile:126: recipe for target 'cmTC_ae89d/fast' failed
+make: *** [cmTC_ae89d/fast] Error 2
+
+File /home/zzwa/sjtu/slam_legion/ch5/stereo/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/zzwa/sjtu/slam_legion/ch5/stereo/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_aa038/fast"
+/usr/bin/make -f CMakeFiles/cmTC_aa038.dir/build.make CMakeFiles/cmTC_aa038.dir/build
+make[1]: 进入目录“/home/zzwa/sjtu/slam_legion/ch5/stereo/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_aa038.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_aa038.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_aa038
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aa038.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_aa038.dir/CheckFunctionExists.c.o  -o cmTC_aa038 -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_aa038.dir/build.make:97: recipe for target 'cmTC_aa038' failed
+make[1]: *** [cmTC_aa038] Error 1
+make[1]: 离开目录“/home/zzwa/sjtu/slam_legion/ch5/stereo/build/CMakeFiles/CMakeTmp”
+Makefile:126: recipe for target 'cmTC_aa038/fast' failed
+make: *** [cmTC_aa038/fast] Error 2
+
+
