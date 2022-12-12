@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/zzwa/sjtu/slam_zzwa/ch3/visualizeGeometry/visualizeGeometry.cpp
+/home/zzwa/sjtu/slam_legion/ch3/visualizeGeometry/visualizeGeometry.cpp
 iostream
 -
 iomanip

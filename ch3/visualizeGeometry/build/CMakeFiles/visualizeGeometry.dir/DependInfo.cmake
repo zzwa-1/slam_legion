@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/zzwa/sjtu/slam_zzwa/ch3/visualizeGeometry/visualizeGeometry.cpp" "/home/zzwa/sjtu/slam_zzwa/ch3/visualizeGeometry/build/CMakeFiles/visualizeGeometry.dir/visualizeGeometry.cpp.o"
+  "/home/zzwa/sjtu/slam_legion/ch3/visualizeGeometry/visualizeGeometry.cpp" "/home/zzwa/sjtu/slam_legion/ch3/visualizeGeometry/build/CMakeFiles/visualizeGeometry.dir/visualizeGeometry.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
