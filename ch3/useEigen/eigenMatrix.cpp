@@ -7,7 +7,7 @@ using namespace std;
 #include <eigen3/Eigen/Core>
 // 稠密矩阵的代数运算（逆，特征值等）
 #include <eigen3/Eigen/Dense>
-
+#include <eigen3/Eigen/Geometry>
 using namespace Eigen;
 
 #define MATRIX_SIZE 50
