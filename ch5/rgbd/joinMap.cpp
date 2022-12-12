@@ -100,7 +100,6 @@ void showPointCloud(const vector<Vector6d, Eigen::aligned_allocator<Vector6d>> &
 
     while (pangolin::ShouldQuit() == false) {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
         d_cam.Activate(s_cam);
         glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 
