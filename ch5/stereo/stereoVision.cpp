@@ -61,7 +61,7 @@ int main(int argc, char **argv) {
 
     cv::imshow("disparity", disparity / 96.0); //对视差图归一化
     cv::waitKey(0);
-    // 画出点云
+    // 画出点云联赛
     showPointCloud(pointcloud);
     return 0;
 }
