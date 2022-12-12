@@ -105,6 +105,7 @@ joinMap: /usr/local/lib/libpango_python.so
 joinMap: /usr/local/lib/libpango_scene.so
 joinMap: /usr/local/lib/libpango_tools.so
 joinMap: /usr/local/lib/libpango_video.so
+joinMap: /usr/local/lib/libfmt.a
 joinMap: /usr/local/lib/libopencv_calib3d.so.3.4.15
 joinMap: /usr/local/lib/libopencv_features2d.so.3.4.15
 joinMap: /usr/local/lib/libopencv_flann.so.3.4.15

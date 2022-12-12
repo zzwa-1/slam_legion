@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_FLAGS =   -Wall  -g   -std=gnu++14
 
-CXX_DEFINES = -DHAVE_EIGEN -DHAVE_GLEW -DPANGO_DEFAULT_WIN_URI=\"x11\" -D_LINUX_
+CXX_DEFINES = -DFMT_LOCALE -DHAVE_EIGEN -DHAVE_GLEW -DPANGO_DEFAULT_WIN_URI=\"x11\" -D_LINUX_
 
 CXX_INCLUDES = -isystem /usr/include/eigen3 -isystem /usr/local/include -isystem /usr/local/include/opencv 
 
