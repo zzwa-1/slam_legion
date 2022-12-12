@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/zzwa/sjtu/slam_zzwa/ch3/useEigen/eigenMatrix.cpp
+/home/zzwa/sjtu/slam_legion/ch3/useEigen/eigenMatrix.cpp
 iostream
 -
 ctime

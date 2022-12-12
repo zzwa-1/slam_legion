@@ -1,4 +1,4 @@
-# Install script for directory: /home/zzwa/sjtu/slam_zzwa/ch3/useEigen
+# Install script for directory: /home/zzwa/sjtu/slam_legion/ch3/useEigen
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/zzwa/sjtu/slam_zzwa/ch3/useEigen/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/zzwa/sjtu/slam_legion/ch3/useEigen/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
