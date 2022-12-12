@@ -190,6 +190,9 @@ JOINMAP_BINARY_DIR:STATIC=/home/zzwa/sjtu/slam_legion/ch5/rgbd/build
 //Value Computed by CMake
 JOINMAP_SOURCE_DIR:STATIC=/home/zzwa/sjtu/slam_legion/ch5/rgbd
 
+//The directory containing a CMake configuration file for OpenCV.
+OpenCV_DIR:PATH=/usr/local/share/OpenCV
+
 //The directory containing a CMake configuration file for Pangolin.
 Pangolin_DIR:PATH=/usr/local/lib/cmake/Pangolin
 
@@ -347,6 +350,8 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding OpenCV
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr/local][v3.4.15()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 

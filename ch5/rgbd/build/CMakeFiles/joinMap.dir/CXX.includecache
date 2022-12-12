@@ -1162,6 +1162,10 @@ tuple
 format.h
 /usr/local/include/fmt/format.h
 
+/usr/local/include/opencv/cxcore.h
+opencv2/core/core_c.h
+/usr/local/include/opencv/opencv2/core/core_c.h
+
 /usr/local/include/opencv2/calib3d.hpp
 opencv2/core.hpp
 /usr/local/include/opencv2/opencv2/core.hpp

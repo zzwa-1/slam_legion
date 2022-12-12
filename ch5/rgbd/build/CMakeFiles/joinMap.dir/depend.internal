@@ -220,6 +220,7 @@ CMakeFiles/joinMap.dir/joinMap.cpp.o
  /usr/local/include/fmt/format.h
  /usr/local/include/fmt/ostream.h
  /usr/local/include/fmt/xchar.h
+ /usr/local/include/opencv/cxcore.h
  /usr/local/include/opencv2/calib3d.hpp
  /usr/local/include/opencv2/calib3d/calib3d_c.h
  /usr/local/include/opencv2/core.hpp
