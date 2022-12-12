@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/zzwa/sjtu/slam_zzwa/ch3/useGeometry/eigenGeometry.cpp
+/home/zzwa/sjtu/slam_legion/ch3/useGeometry/eigenGeometry.cpp
 iostream
 -
 cmath

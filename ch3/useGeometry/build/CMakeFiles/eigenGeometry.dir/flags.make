@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/include/eigen3 -I/home/zzwa/sjtu/slam_zzwa/ch3/useGeometry/include 
+CXX_INCLUDES = -I/usr/include/eigen3 
 
