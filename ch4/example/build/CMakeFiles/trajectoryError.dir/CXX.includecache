@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/zzwa/sjtu/slam_zzwa/ch4/example/trajectoryError.cpp
+/home/zzwa/sjtu/slam_legion/ch4/example/trajectoryError.cpp
 iostream
 -
 fstream
