@@ -1,0 +1,2 @@
+运行imagesBasics.cpp时应该是
+build/imageBasics ubuntu.png
