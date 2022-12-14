@@ -1,8 +1,8 @@
 #include <iostream>
 #include <chrono>
 #include <opencv2/opencv.hpp>
-#include <Eigen/Core>
-#include <Eigen/Dense>
+#include <eigen3/Eigen/Core>
+#include <eigen3/Eigen/Dense>
 
 using namespace std;
 using namespace Eigen;
