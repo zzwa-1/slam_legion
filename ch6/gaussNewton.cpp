@@ -1,21 +1,21 @@
 #include <iostream>
 #include <chrono>
 #include <opencv2/opencv.hpp>
-#include <eigen3/Eigen/Core>
-#include <eigen3/Eigen/Dense>
+#include <eigen3/Eigen/Core> //Eigen核心块
+#include <eigen3/Eigen/Dense>  //Eigen稠密矩阵运算模块
 
 using namespace std;
 using namespace Eigen;
 
 int main(int argc, char **argv) {
   double ar = 1.0, br = 2.0, cr = 1.0;         // 真实参数值
-  double ae = 2.0, be = -1.0, ce = 5.0;        // 估计参数值
+  double ae = 2.0, be = -1.0, ce = 5.0;        // 估计参数初始值
   int N = 100;                                 // 数据点
   double w_sigma = 1.0;                        // 噪声Sigma值
   double inv_sigma = 1.0 / w_sigma;
-  cv::RNG rng;                                 // OpenCV随机数产生器
+  cv::RNG rng;                                 // OpenCV随机数产生器，全称是Random Number Generator
 
-  vector<double> x_data, y_data;      // 数据
+  vector<double> x_data, y_data;      // 向量型数据
   for (int i = 0; i < N; i++) {
     double x = i / 100.0;
     x_data.push_back(x);
@@ -29,14 +29,14 @@ int main(int argc, char **argv) {
   chrono::steady_clock::time_point t1 = chrono::steady_clock::now();
   for (int iter = 0; iter < iterations; iter++) {
 
-    Matrix3d H = Matrix3d::Zero();             // Hessian = J^T W^{-1} J in Gauss-Newton
-    Vector3d b = Vector3d::Zero();             // bias
+    Matrix3d H = Matrix3d::Zero();             // 将矩阵H初始化为3*3零矩阵，表示海塞矩阵，H = J * (sigma * sigma).inv() * J.transpose()
+    Vector3d b = Vector3d::Zero();             // 将b初始化为3*1零向量，b = -J * (sigma * sigma).inv() * error，error表示测量方程的残差
     cost = 0;
 
     for (int i = 0; i < N; i++) {
-      double xi = x_data[i], yi = y_data[i];  // 第i个数据点
-      double error = yi - exp(ae * xi * xi + be * xi + ce);
-      Vector3d J; // 雅可比矩阵
+      double xi = x_data[i], yi = y_data[i];  // 第i个数据点，都是标量
+      double error = yi - exp(ae * xi * xi + be * xi + ce);  //计算残差
+      Vector3d J; // 定义三维i雅可比矩阵
       J[0] = -xi * xi * exp(ae * xi * xi + be * xi + ce);  // de/da
       J[1] = -xi * exp(ae * xi * xi + be * xi + ce);  // de/db
       J[2] = -exp(ae * xi * xi + be * xi + ce);  // de/dc
@@ -48,8 +48,8 @@ int main(int argc, char **argv) {
     }
 
     // 求解线性方程 Hx=b
-    Vector3d dx = H.ldlt().solve(b);
-    if (isnan(dx[0])) {
+    Vector3d dx = H.ldlt().solve(b);  //ldlt()表示利用Cholesky分解求解dx 
+    if (isnan(dx[0])) {//isnan()函数判断输入是否为非数字，是非数字返回真，nan全称为not a numbe
       cout << "result is nan!" << endl;
       break;
     }
