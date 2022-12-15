@@ -1,23 +1,18 @@
-//
-// Created by xiang on 18-11-19.
-//
-
 #include <iostream>
 #include <opencv2/core/core.hpp>
-#include <ceres/ceres.h>
+#include <ceres/ceres.h>  //ceres库头文件
 #include <chrono>
 
 using namespace std;
 
 // 代价函数的计算模型
 struct CURVE_FITTING_COST {
-  CURVE_FITTING_COST(double x, double y) : _x(x), _y(y) {}
+  CURVE_FITTING_COST(double x, double y) : _x(x), _y(y) {} //使用初始化列表赋值写法的构造函数！
 
   // 残差的计算
-  template<typename T>
-  bool operator()(
-    const T *const abc, // 模型参数，有3维
-    T *residual) const {
+  template<typename T>  //函数模板，使得下面定义的函数可以支持多种不同的形参，避免重载函数的函数体重复设计。
+  bool operator()(const T *const abc,T *residual) const 
+  {
     residual[0] = T(_y) - ceres::exp(abc[0] * T(_x) * T(_x) + abc[1] * T(_x) + abc[2]); // y-exp(ax^2+bx+c)
     return true;
   }
@@ -40,7 +35,7 @@ int main(int argc, char **argv) {
     y_data.push_back(exp(ar * x * x + br * x + cr) + rng.gaussian(w_sigma * w_sigma));
   }
 
-  double abc[3] = {ae, be, ce};
+  double abc[3] = {ae, be, ce};  //定义优化变量
 
   // 构建最小二乘问题
   ceres::Problem problem;

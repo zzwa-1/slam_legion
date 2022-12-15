@@ -22,14 +22,7 @@ public:
   // 重置
   virtual void setToOriginImpl() override {
     _estimate << 0, 0, 0;
-  }
-
-  // 更新
-  virtual void oplusImpl(const double *update) override {
-    _estimate += Eigen::Vector3d(update);
-  }
-
-  // 存盘和读盘：留空
+  }在
   virtual bool read(istream &in) {}
 
   virtual bool write(ostream &out) const {}
