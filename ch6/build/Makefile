@@ -117,41 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named g2oCurveFitting
+# Target rules for targets named ceresCurveFitting
 
 # Build rule for target.
-g2oCurveFitting: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 g2oCurveFitting
-.PHONY : g2oCurveFitting
+ceresCurveFitting: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ceresCurveFitting
+.PHONY : ceresCurveFitting
 
 # fast build rule for target.
-g2oCurveFitting/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/g2oCurveFitting.dir/build.make CMakeFiles/g2oCurveFitting.dir/build
-.PHONY : g2oCurveFitting/fast
+ceresCurveFitting/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ceresCurveFitting.dir/build.make CMakeFiles/ceresCurveFitting.dir/build
+.PHONY : ceresCurveFitting/fast
 
-g2oCurveFitting.o: g2oCurveFitting.cpp.o
-.PHONY : g2oCurveFitting.o
+ceresCurveFitting.o: ceresCurveFitting.cpp.o
+.PHONY : ceresCurveFitting.o
 
 # target to build an object file
-g2oCurveFitting.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/g2oCurveFitting.dir/build.make CMakeFiles/g2oCurveFitting.dir/g2oCurveFitting.cpp.o
-.PHONY : g2oCurveFitting.cpp.o
+ceresCurveFitting.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ceresCurveFitting.dir/build.make CMakeFiles/ceresCurveFitting.dir/ceresCurveFitting.cpp.o
+.PHONY : ceresCurveFitting.cpp.o
 
-g2oCurveFitting.i: g2oCurveFitting.cpp.i
-.PHONY : g2oCurveFitting.i
+ceresCurveFitting.i: ceresCurveFitting.cpp.i
+.PHONY : ceresCurveFitting.i
 
 # target to preprocess a source file
-g2oCurveFitting.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/g2oCurveFitting.dir/build.make CMakeFiles/g2oCurveFitting.dir/g2oCurveFitting.cpp.i
-.PHONY : g2oCurveFitting.cpp.i
+ceresCurveFitting.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ceresCurveFitting.dir/build.make CMakeFiles/ceresCurveFitting.dir/ceresCurveFitting.cpp.i
+.PHONY : ceresCurveFitting.cpp.i
 
-g2oCurveFitting.s: g2oCurveFitting.cpp.s
-.PHONY : g2oCurveFitting.s
+ceresCurveFitting.s: ceresCurveFitting.cpp.s
+.PHONY : ceresCurveFitting.s
 
 # target to generate assembly for a file
-g2oCurveFitting.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/g2oCurveFitting.dir/build.make CMakeFiles/g2oCurveFitting.dir/g2oCurveFitting.cpp.s
-.PHONY : g2oCurveFitting.cpp.s
+ceresCurveFitting.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ceresCurveFitting.dir/build.make CMakeFiles/ceresCurveFitting.dir/ceresCurveFitting.cpp.s
+.PHONY : ceresCurveFitting.cpp.s
 
 # Help Target
 help:
@@ -161,10 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... g2oCurveFitting"
-	@echo "... g2oCurveFitting.o"
-	@echo "... g2oCurveFitting.i"
-	@echo "... g2oCurveFitting.s"
+	@echo "... ceresCurveFitting"
+	@echo "... ceresCurveFitting.o"
+	@echo "... ceresCurveFitting.i"
+	@echo "... ceresCurveFitting.s"
 .PHONY : help
 
 
