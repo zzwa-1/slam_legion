@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named gaussNewton
+# Target rules for targets named ceresCurveFitting
 
 # Build rule for target.
-gaussNewton: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gaussNewton
-.PHONY : gaussNewton
+ceresCurveFitting: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ceresCurveFitting
+.PHONY : ceresCurveFitting
 
 # fast build rule for target.
-gaussNewton/fast:
-	$(MAKE) -f CMakeFiles/gaussNewton.dir/build.make CMakeFiles/gaussNewton.dir/build
-.PHONY : gaussNewton/fast
+ceresCurveFitting/fast:
+	$(MAKE) -f CMakeFiles/ceresCurveFitting.dir/build.make CMakeFiles/ceresCurveFitting.dir/build
+.PHONY : ceresCurveFitting/fast
 
-gaussNewton.o: gaussNewton.cpp.o
+ceresCurveFitting.o: ceresCurveFitting.cpp.o
 
-.PHONY : gaussNewton.o
+.PHONY : ceresCurveFitting.o
 
 # target to build an object file
-gaussNewton.cpp.o:
-	$(MAKE) -f CMakeFiles/gaussNewton.dir/build.make CMakeFiles/gaussNewton.dir/gaussNewton.cpp.o
-.PHONY : gaussNewton.cpp.o
+ceresCurveFitting.cpp.o:
+	$(MAKE) -f CMakeFiles/ceresCurveFitting.dir/build.make CMakeFiles/ceresCurveFitting.dir/ceresCurveFitting.cpp.o
+.PHONY : ceresCurveFitting.cpp.o
 
-gaussNewton.i: gaussNewton.cpp.i
+ceresCurveFitting.i: ceresCurveFitting.cpp.i
 
-.PHONY : gaussNewton.i
+.PHONY : ceresCurveFitting.i
 
 # target to preprocess a source file
-gaussNewton.cpp.i:
-	$(MAKE) -f CMakeFiles/gaussNewton.dir/build.make CMakeFiles/gaussNewton.dir/gaussNewton.cpp.i
-.PHONY : gaussNewton.cpp.i
+ceresCurveFitting.cpp.i:
+	$(MAKE) -f CMakeFiles/ceresCurveFitting.dir/build.make CMakeFiles/ceresCurveFitting.dir/ceresCurveFitting.cpp.i
+.PHONY : ceresCurveFitting.cpp.i
 
-gaussNewton.s: gaussNewton.cpp.s
+ceresCurveFitting.s: ceresCurveFitting.cpp.s
 
-.PHONY : gaussNewton.s
+.PHONY : ceresCurveFitting.s
 
 # target to generate assembly for a file
-gaussNewton.cpp.s:
-	$(MAKE) -f CMakeFiles/gaussNewton.dir/build.make CMakeFiles/gaussNewton.dir/gaussNewton.cpp.s
-.PHONY : gaussNewton.cpp.s
+ceresCurveFitting.cpp.s:
+	$(MAKE) -f CMakeFiles/ceresCurveFitting.dir/build.make CMakeFiles/ceresCurveFitting.dir/ceresCurveFitting.cpp.s
+.PHONY : ceresCurveFitting.cpp.s
 
 # Help Target
 help:
@@ -157,11 +157,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... gaussNewton"
+	@echo "... ceresCurveFitting"
 	@echo "... edit_cache"
-	@echo "... gaussNewton.o"
-	@echo "... gaussNewton.i"
-	@echo "... gaussNewton.s"
+	@echo "... ceresCurveFitting.o"
+	@echo "... ceresCurveFitting.i"
+	@echo "... ceresCurveFitting.s"
 .PHONY : help
 
 
