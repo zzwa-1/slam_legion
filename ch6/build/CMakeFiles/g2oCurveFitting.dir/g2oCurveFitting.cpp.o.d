@@ -135,8 +135,14 @@ CMakeFiles/g2oCurveFitting.dir/g2oCurveFitting.cpp.o: \
  /usr/include/c++/7/bits/locale_facets.tcc \
  /usr/include/c++/7/bits/basic_ios.tcc \
  /usr/include/c++/7/bits/ostream.tcc /usr/include/c++/7/istream \
- /usr/include/c++/7/bits/istream.tcc /usr/include/c++/7/cmath \
- /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/c++/7/bits/istream.tcc \
+ /usr/local/include/g2o/core/g2o_core_api.h \
+ /usr/local/include/g2o/config.h \
+ /usr/local/include/g2o/core/eigen_types.h /usr/include/eigen3/Eigen/Core \
+ /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
+ /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
+ /usr/include/c++/7/complex /usr/include/c++/7/cmath /usr/include/math.h \
+ /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
@@ -145,17 +151,7 @@ CMakeFiles/g2oCurveFitting.dir/g2oCurveFitting.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
- /usr/include/c++/7/chrono /usr/include/c++/7/ratio \
- /usr/include/c++/7/limits /usr/include/c++/7/ctime \
- /usr/include/c++/7/bits/parse_numbers.h \
- /usr/local/include/g2o/core/g2o_core_api.h \
- /usr/local/include/g2o/config.h \
- /usr/local/include/g2o/core/base_vertex.h \
- /usr/include/eigen3/Eigen/Cholesky /usr/include/eigen3/Eigen/Core \
- /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
- /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
- /usr/include/c++/7/complex /usr/include/c++/7/sstream \
- /usr/include/c++/7/bits/sstream.tcc \
+ /usr/include/c++/7/sstream /usr/include/c++/7/bits/sstream.tcc \
  /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h \
  /usr/lib/gcc/x86_64-linux-gnu/7/include/mmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/7/include/emmintrin.h \
@@ -171,7 +167,7 @@ CMakeFiles/g2oCurveFitting.dir/g2oCurveFitting.cpp.o: \
  /usr/include/string.h /usr/include/strings.h \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
- /usr/include/c++/7/climits \
+ /usr/include/c++/7/limits /usr/include/c++/7/climits \
  /usr/lib/gcc/x86_64-linux-gnu/7/include-fixed/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/7/include-fixed/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
@@ -294,17 +290,11 @@ CMakeFiles/g2oCurveFitting.dir/g2oCurveFitting.cpp.o: \
  /usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h \
  /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
  /usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
+ /usr/include/eigen3/Eigen/Geometry /usr/include/eigen3/Eigen/Core \
+ /usr/include/eigen3/Eigen/SVD /usr/include/eigen3/Eigen/QR \
+ /usr/include/eigen3/Eigen/Cholesky \
  /usr/include/eigen3/Eigen/src/Cholesky/LLT.h \
  /usr/include/eigen3/Eigen/src/Cholesky/LDLT.h \
- /usr/include/eigen3/Eigen/Core /usr/include/eigen3/Eigen/Dense \
- /usr/include/eigen3/Eigen/LU /usr/include/eigen3/Eigen/src/misc/Kernel.h \
- /usr/include/eigen3/Eigen/src/misc/Image.h \
- /usr/include/eigen3/Eigen/src/LU/FullPivLU.h \
- /usr/include/eigen3/Eigen/src/LU/PartialPivLU.h \
- /usr/include/eigen3/Eigen/src/LU/Determinant.h \
- /usr/include/eigen3/Eigen/src/LU/InverseImpl.h \
- /usr/include/eigen3/Eigen/src/LU/arch/Inverse_SSE.h \
- /usr/include/eigen3/Eigen/Cholesky /usr/include/eigen3/Eigen/QR \
  /usr/include/eigen3/Eigen/Jacobi \
  /usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h \
  /usr/include/eigen3/Eigen/Householder \
@@ -315,13 +305,18 @@ CMakeFiles/g2oCurveFitting.dir/g2oCurveFitting.cpp.o: \
  /usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h \
  /usr/include/eigen3/Eigen/src/QR/ColPivHouseholderQR.h \
  /usr/include/eigen3/Eigen/src/QR/CompleteOrthogonalDecomposition.h \
- /usr/include/eigen3/Eigen/SVD \
  /usr/include/eigen3/Eigen/src/misc/RealSvd2x2.h \
  /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h \
  /usr/include/eigen3/Eigen/src/SVD/SVDBase.h \
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD.h \
- /usr/include/eigen3/Eigen/src/SVD/BDCSVD.h \
- /usr/include/eigen3/Eigen/Geometry \
+ /usr/include/eigen3/Eigen/src/SVD/BDCSVD.h /usr/include/eigen3/Eigen/LU \
+ /usr/include/eigen3/Eigen/src/misc/Kernel.h \
+ /usr/include/eigen3/Eigen/src/misc/Image.h \
+ /usr/include/eigen3/Eigen/src/LU/FullPivLU.h \
+ /usr/include/eigen3/Eigen/src/LU/PartialPivLU.h \
+ /usr/include/eigen3/Eigen/src/LU/Determinant.h \
+ /usr/include/eigen3/Eigen/src/LU/InverseImpl.h \
+ /usr/include/eigen3/Eigen/src/LU/arch/Inverse_SSE.h \
  /usr/include/eigen3/Eigen/src/Geometry/OrthoMethods.h \
  /usr/include/eigen3/Eigen/src/Geometry/EulerAngles.h \
  /usr/include/eigen3/Eigen/src/Geometry/Homogeneous.h \
@@ -337,7 +332,27 @@ CMakeFiles/g2oCurveFitting.dir/g2oCurveFitting.cpp.o: \
  /usr/include/eigen3/Eigen/src/Geometry/AlignedBox.h \
  /usr/include/eigen3/Eigen/src/Geometry/Umeyama.h \
  /usr/include/eigen3/Eigen/src/Geometry/arch/Geometry_SSE.h \
- /usr/include/eigen3/Eigen/Eigenvalues \
+ /usr/local/include/g2o/core/base_vertex.h \
+ /usr/local/include/g2o/core/optimizable_graph.h /usr/include/c++/7/set \
+ /usr/include/c++/7/bits/stl_tree.h \
+ /usr/include/c++/7/ext/aligned_buffer.h \
+ /usr/include/c++/7/bits/stl_set.h /usr/include/c++/7/bits/stl_multiset.h \
+ /usr/local/include/g2o/core/openmp_mutex.h \
+ /usr/local/include/g2o/core/hyper_graph.h /usr/include/c++/7/bitset \
+ /usr/include/c++/7/vector /usr/include/c++/7/bits/stl_uninitialized.h \
+ /usr/include/c++/7/bits/stl_vector.h \
+ /usr/include/c++/7/bits/stl_bvector.h /usr/include/c++/7/bits/vector.tcc \
+ /usr/include/c++/7/unordered_map /usr/include/c++/7/bits/hashtable.h \
+ /usr/include/c++/7/bits/hashtable_policy.h \
+ /usr/include/c++/7/bits/unordered_map.h \
+ /usr/local/include/g2o/core/g2o_core_api.h \
+ /usr/local/include/g2o/core/parameter.h \
+ /usr/local/include/g2o/core/parameter_container.h /usr/include/c++/7/map \
+ /usr/include/c++/7/bits/stl_map.h /usr/include/c++/7/bits/stl_multimap.h \
+ /usr/local/include/g2o/core/jacobian_workspace.h \
+ /usr/local/include/g2o/stuff/macros.h \
+ /usr/local/include/g2o/core/creators.h /usr/include/eigen3/Eigen/Dense \
+ /usr/include/eigen3/Eigen/Geometry /usr/include/eigen3/Eigen/Eigenvalues \
  /usr/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
@@ -354,36 +369,14 @@ CMakeFiles/g2oCurveFitting.dir/g2oCurveFitting.cpp.o: \
  /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
- /usr/include/c++/7/stack /usr/include/c++/7/deque \
- /usr/include/c++/7/bits/stl_uninitialized.h \
- /usr/include/c++/7/bits/stl_deque.h /usr/include/c++/7/bits/deque.tcc \
- /usr/include/c++/7/bits/stl_stack.h \
- /usr/local/include/g2o/core/creators.h \
- /usr/local/include/g2o/core/hyper_graph.h /usr/include/c++/7/bitset \
- /usr/include/c++/7/set /usr/include/c++/7/bits/stl_tree.h \
- /usr/include/c++/7/ext/aligned_buffer.h \
- /usr/include/c++/7/bits/stl_set.h /usr/include/c++/7/bits/stl_multiset.h \
- /usr/include/c++/7/unordered_map /usr/include/c++/7/bits/hashtable.h \
- /usr/include/c++/7/bits/hashtable_policy.h \
- /usr/include/c++/7/bits/unordered_map.h /usr/include/c++/7/vector \
- /usr/include/c++/7/bits/stl_vector.h \
- /usr/include/c++/7/bits/stl_bvector.h /usr/include/c++/7/bits/vector.tcc \
- /usr/local/include/g2o/core/g2o_core_api.h \
- /usr/local/include/g2o/stuff/macros.h \
- /usr/local/include/g2o/core/optimizable_graph.h \
- /usr/local/include/g2o/core/io_helper.h \
- /usr/local/include/g2o/core/jacobian_workspace.h \
- /usr/local/include/g2o/core/eigen_types.h \
- /usr/include/eigen3/Eigen/Geometry \
- /usr/local/include/g2o/core/openmp_mutex.h \
- /usr/local/include/g2o/core/parameter.h \
- /usr/local/include/g2o/core/parameter_container.h /usr/include/c++/7/map \
- /usr/include/c++/7/bits/stl_map.h /usr/include/c++/7/bits/stl_multimap.h \
+ /usr/include/eigen3/Eigen/Cholesky /usr/include/c++/7/stack \
+ /usr/include/c++/7/deque /usr/include/c++/7/bits/stl_deque.h \
+ /usr/include/c++/7/bits/deque.tcc /usr/include/c++/7/bits/stl_stack.h \
  /usr/local/include/g2o/core/base_vertex.hpp \
  /usr/local/include/g2o/core/base_unary_edge.h \
- /usr/local/include/g2o/core/base_fixed_sized_edge.h \
- /usr/local/include/ceres/internal/fixed_array.h \
- /usr/include/c++/7/memory /usr/include/c++/7/bits/stl_raw_storage_iter.h \
+ /usr/local/include/g2o/stuff/misc.h \
+ /usr/local/include/g2o/stuff/macros.h /usr/include/c++/7/memory \
+ /usr/include/c++/7/bits/stl_raw_storage_iter.h \
  /usr/include/c++/7/ext/concurrence.h \
  /usr/include/c++/7/bits/unique_ptr.h \
  /usr/include/c++/7/bits/shared_ptr.h \
@@ -393,31 +386,18 @@ CMakeFiles/g2oCurveFitting.dir/g2oCurveFitting.cpp.o: \
  /usr/include/c++/7/bits/atomic_base.h \
  /usr/include/c++/7/bits/atomic_lockfree_defines.h \
  /usr/include/c++/7/backward/auto_ptr.h \
- /usr/local/include/ceres/internal/memory.h /usr/include/glog/logging.h \
- /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
- /usr/include/x86_64-linux-gnu/bits/environments.h \
- /usr/include/x86_64-linux-gnu/bits/confname.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd.h /usr/include/inttypes.h \
- /usr/include/gflags/gflags.h /usr/include/gflags/gflags_declare.h \
- /usr/include/gflags/gflags_gflags.h /usr/include/glog/log_severity.h \
- /usr/include/glog/vlog_is_on.h /usr/local/include/g2o/core/base_edge.h \
- /usr/local/include/g2o/stuff/misc.h \
- /usr/local/include/g2o/stuff/macros.h \
- /usr/local/include/g2o/stuff/tuple_tools.h \
+ /usr/local/include/g2o/core/base_edge.h \
  /usr/local/include/g2o/core/robust_kernel.h \
- /usr/local/include/g2o/core/base_fixed_sized_edge.hpp \
+ /usr/local/include/g2o/core/base_unary_edge.hpp \
  /usr/local/include/g2o/core/block_solver.h \
- /usr/local/include/g2o/core/dynamic_aligned_buffer.hpp \
- /usr/local/include/g2o/core/linear_solver.h \
- /usr/local/include/g2o/core/marginal_covariance_cholesky.h \
+ /usr/local/include/g2o/core/solver.h \
  /usr/local/include/g2o/core/sparse_block_matrix.h \
  /usr/include/c++/7/fstream /usr/include/c++/7/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/7/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/7/bits/c++io.h \
  /usr/include/c++/7/bits/fstream.tcc /usr/include/c++/7/iomanip \
  /usr/include/c++/7/locale /usr/include/c++/7/bits/locale_facets_nonio.h \
+ /usr/include/c++/7/ctime \
  /usr/include/x86_64-linux-gnu/c++/7/bits/time_members.h \
  /usr/include/x86_64-linux-gnu/c++/7/bits/messages_members.h \
  /usr/include/libintl.h /usr/include/c++/7/bits/locale_facets_nonio.tcc \
@@ -425,18 +405,19 @@ CMakeFiles/g2oCurveFitting.dir/g2oCurveFitting.cpp.o: \
  /usr/include/c++/7/bits/stringfwd.h /usr/include/c++/7/bits/allocator.h \
  /usr/include/c++/7/bits/codecvt.h /usr/include/c++/7/bits/unique_ptr.h \
  /usr/include/c++/7/bits/quoted_string.h \
- /usr/local/include/g2o/stuff/sparse_helper.h \
- /usr/local/include/g2o/stuff/g2o_stuff_api.h \
+ /usr/local/include/g2o/core/sparse_block_matrix_ccs.h \
  /usr/local/include/g2o/core/matrix_operations.h \
  /usr/local/include/g2o/core/matrix_structure.h \
- /usr/local/include/g2o/core/sparse_block_matrix_ccs.h \
  /usr/local/include/g2o/core/sparse_block_matrix.hpp \
- /usr/local/include/g2o/core/solver.h \
+ /usr/local/include/g2o/core/linear_solver.h \
  /usr/local/include/g2o/core/sparse_block_matrix_diagonal.h \
+ /usr/local/include/g2o/core/dynamic_aligned_buffer.hpp \
  /usr/local/include/g2o/core/block_solver.hpp \
- /usr/include/eigen3/Eigen/LU /usr/local/include/g2o/stuff/timeutil.h \
  /usr/local/include/g2o/core/sparse_optimizer.h \
- /usr/local/include/g2o/core/batch_stats.h \
+ /usr/local/include/g2o/core/batch_stats.h /usr/include/eigen3/Eigen/LU \
+ /usr/local/include/g2o/stuff/timeutil.h /usr/include/c++/7/chrono \
+ /usr/include/c++/7/ratio /usr/include/c++/7/bits/parse_numbers.h \
+ /usr/local/include/g2o/stuff/g2o_stuff_api.h \
  /usr/local/include/g2o/core/optimization_algorithm_levenberg.h \
  /usr/local/include/g2o/core/optimization_algorithm_with_hessian.h \
  /usr/local/include/g2o/core/optimization_algorithm.h \
@@ -445,8 +426,8 @@ CMakeFiles/g2oCurveFitting.dir/g2oCurveFitting.cpp.o: \
  /usr/local/include/g2o/core/optimization_algorithm_gauss_newton.h \
  /usr/local/include/g2o/core/optimization_algorithm_dogleg.h \
  /usr/local/include/g2o/solvers/dense/linear_solver_dense.h \
- /usr/local/include/g2o/core/batch_stats.h \
  /usr/local/include/g2o/core/linear_solver.h \
+ /usr/local/include/g2o/core/batch_stats.h \
  /usr/local/include/opencv2/core/core.hpp \
  /usr/local/include/opencv2/core.hpp \
  /usr/local/include/opencv2/core/cvdef.h \
