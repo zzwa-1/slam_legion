@@ -15,12 +15,14 @@
 using namespace std;
 
 // 曲线模型的顶点，模板参数：优化变量维度和数据类型
-class CurveFittingVertex : public g2o::BaseVertex<3, Eigen::Vector3d> {
-public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+//:表示继承，public表示公有继承；CurveFittingVertex是派生类，BaseVertex<3, Eigen::Vector3d>是基类
+class CurveFittingVertex : public g2o::BaseVertex<3, Eigen::Vector3d>   //调用模板类
+{
+public:  //‘以下定义的成员变量和成员函数都是公有的
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW  //解决Eigen库数据结构内存对齐问题
 
   // 重置
-  virtual void setToOriginImpl() override {
+  virtual void setToOriginImpl() override { //virtual表示该函数为虚函数，override保留字表示当前函数重写了基类的虚函数
     _estimate << 0, 0, 0;
   }
 
@@ -30,17 +32,18 @@ public:
   }
 
   // 存盘和读盘：留空
-  virtual bool read(istream &in) {}
+  virtual bool read(istream &in) {} //istream类是c++标准输入流的一个基类
 
-  virtual bool write(ostream &out) const {}
+  virtual bool write(ostream &out) const {}  //ostream类是c++标准输出流的一个基类
 };
 
+// 曲线模型的边
 // 误差模型 模板参数：观测值维度，类型，连接顶点类型
 class CurveFittingEdge : public g2o::BaseUnaryEdge<1, double, CurveFittingVertex> {
 public:
   EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 
-  CurveFittingEdge(double x) : BaseUnaryEdge(), _x(x) {}
+  CurveFittingEdge(double x) : BaseUnaryEdge(), _x(x) {}  //使用列表赋初值
 
   // 计算曲线模型误差
   virtual void computeError() override {
@@ -79,11 +82,11 @@ int main(int argc, char **argv) {
   for (int i = 0; i < N; i++) {
     double x = i / 100.0;
     x_data.push_back(x);
-    y_data.push_back(exp(ar * x * x + br * x + cr) + rng.gaussian(w_sigma * w_sigma));
+    y_data.push_back(exp(ar * x * x + br * x + cr) + rng.gaussian(w_sigma * w_sigma));  //生成时间序列和测量值
   }
 
   // 构建图优化，先设定g2o
-  typedef g2o::BlockSolver<g2o::BlockSolverTraits<3, 1>> BlockSolverType;  // 每个误差项优化变量维度为3，误差值维度为1
+  typedef g2o::BlockSolver<g2o::BlockSolverTraits<3, 1>> BlockSolverType;  // 起别名，每个误差项优化变量维度为3，误差值维度为1
   typedef g2o::LinearSolverDense<BlockSolverType::PoseMatrixType> LinearSolverType; // 线性求解器类型
 
   // 梯度下降方法，可以从GN, LM, DogLeg 中选
@@ -91,7 +94,7 @@ int main(int argc, char **argv) {
     g2o::make_unique<BlockSolverType>(g2o::make_unique<LinearSolverType>()));
   g2o::SparseOptimizer optimizer;     // 图模型
   optimizer.setAlgorithm(solver);   // 设置求解器
-  optimizer.setVerbose(true);       // 打开调试输出
+  optimizer.setVerbose(true);       // 打开调试输出，向屏幕上显示优化过程信息，chi2表示代价函数值。
 
   // 往图中增加顶点
   CurveFittingVertex *v = new CurveFittingVertex();
@@ -112,8 +115,8 @@ int main(int argc, char **argv) {
   // 执行优化
   cout << "start optimization" << endl;
   chrono::steady_clock::time_point t1 = chrono::steady_clock::now();
-  optimizer.initializeOptimization();
-  optimizer.optimize(10);
+  optimizer.initializeOptimization(); //优化过程初始化
+  optimizer.optimize(20);  //设置优化的迭代次数
   chrono::steady_clock::time_point t2 = chrono::steady_clock::now();
   chrono::duration<double> time_used = chrono::duration_cast<chrono::duration<double>>(t2 - t1);
   cout << "solve time cost = " << time_used.count() << " seconds. " << endl;
