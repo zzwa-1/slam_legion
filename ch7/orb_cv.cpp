@@ -7,15 +7,15 @@
 using namespace std;
 using namespace cv;
 
+string path1 = "/home/zzwa/sjtu/slam_legion/ch7/1.png";  //图片1路径
+string path2 = "/home/zzwa/sjtu/slam_legion/ch7/2.png";  //图片2路径
+
 int main(int argc, char **argv) {
-  if (argc != 3) {
-    cout << "usage: feature_extraction img1 img2" << endl;
-    return 1;
-  }
+
   //-- 读取图像
-  Mat img_1 = imread(argv[1], CV_LOAD_IMAGE_COLOR);
-  Mat img_2 = imread(argv[2], CV_LOAD_IMAGE_COLOR);
-  assert(img_1.data != nullptr && img_2.data != nullptr);
+  Mat img_1 = imread(path1, CV_LOAD_IMAGE_COLOR);  //表示返回一张彩色图
+  Mat img_2 = imread(path2, CV_LOAD_IMAGE_COLOR);
+  assert(img_1.data != nullptr && img_2.data != nullptr); //assert()为断言函数，如果它的条件返回错误，则终止程序执行
 
   //-- 初始化
   std::vector<KeyPoint> keypoints_1, keypoints_2;
