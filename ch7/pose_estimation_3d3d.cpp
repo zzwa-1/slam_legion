@@ -15,6 +15,7 @@
 #include <g2o/solvers/dense/linear_solver_dense.h>
 #include <chrono>
 #include <sophus/se3.hpp>
+#include <boost/format.hpp> 
 
 using namespace std;
 using namespace cv;
