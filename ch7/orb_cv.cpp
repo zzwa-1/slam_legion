@@ -18,10 +18,10 @@ int main(int argc, char **argv) {
   assert(img_1.data != nullptr && img_2.data != nullptr); //assert()为断言函数，如果它的条件返回错误，则终止程序执行
 
   //-- 初始化
-  std::vector<KeyPoint> keypoints_1, keypoints_2;
-  Mat descriptors_1, descriptors_2;
-  Ptr<FeatureDetector> detector = ORB::create();
-  Ptr<DescriptorExtractor> descriptor = ORB::create();
+  std::vector<KeyPoint> keypoints_1, keypoints_2;  //提取两张图片的关键点
+  Mat descriptors_1, descriptors_2;  //描述子
+  Ptr<FeatureDetector> detector = ORB::create();  //可以修改特征点的个数来增加匹配点的数量，创建特征检测器
+  Ptr<DescriptorExtractor> descriptor = ORB::create();  //创建描述子提取器
   Ptr<DescriptorMatcher> matcher = DescriptorMatcher::create("BruteForce-Hamming");
 
   //-- 第一步:检测 Oriented FAST 角点位置
