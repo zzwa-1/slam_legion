@@ -129,71 +129,6 @@ orb_cv/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/orb_cv.dir/build.make CMakeFiles/orb_cv.dir/build
 .PHONY : orb_cv/fast
 
-#=============================================================================
-# Target rules for targets named orb_self
-
-# Build rule for target.
-orb_self: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 orb_self
-.PHONY : orb_self
-
-# fast build rule for target.
-orb_self/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/orb_self.dir/build.make CMakeFiles/orb_self.dir/build
-.PHONY : orb_self/fast
-
-#=============================================================================
-# Target rules for targets named pose_estimation_2d2d
-
-# Build rule for target.
-pose_estimation_2d2d: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pose_estimation_2d2d
-.PHONY : pose_estimation_2d2d
-
-# fast build rule for target.
-pose_estimation_2d2d/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pose_estimation_2d2d.dir/build.make CMakeFiles/pose_estimation_2d2d.dir/build
-.PHONY : pose_estimation_2d2d/fast
-
-#=============================================================================
-# Target rules for targets named triangulation
-
-# Build rule for target.
-triangulation: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 triangulation
-.PHONY : triangulation
-
-# fast build rule for target.
-triangulation/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/triangulation.dir/build.make CMakeFiles/triangulation.dir/build
-.PHONY : triangulation/fast
-
-#=============================================================================
-# Target rules for targets named pose_estimation_3d2d
-
-# Build rule for target.
-pose_estimation_3d2d: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pose_estimation_3d2d
-.PHONY : pose_estimation_3d2d
-
-# fast build rule for target.
-pose_estimation_3d2d/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pose_estimation_3d2d.dir/build.make CMakeFiles/pose_estimation_3d2d.dir/build
-.PHONY : pose_estimation_3d2d/fast
-
-#=============================================================================
-# Target rules for targets named pose_estimation_3d3d
-
-# Build rule for target.
-pose_estimation_3d3d: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pose_estimation_3d3d
-.PHONY : pose_estimation_3d3d
-
-# fast build rule for target.
-pose_estimation_3d3d/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pose_estimation_3d3d.dir/build.make CMakeFiles/pose_estimation_3d3d.dir/build
-.PHONY : pose_estimation_3d3d/fast
-
 orb_cv.o: orb_cv.cpp.o
 .PHONY : orb_cv.o
 
@@ -218,126 +153,6 @@ orb_cv.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/orb_cv.dir/build.make CMakeFiles/orb_cv.dir/orb_cv.cpp.s
 .PHONY : orb_cv.cpp.s
 
-orb_self.o: orb_self.cpp.o
-.PHONY : orb_self.o
-
-# target to build an object file
-orb_self.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/orb_self.dir/build.make CMakeFiles/orb_self.dir/orb_self.cpp.o
-.PHONY : orb_self.cpp.o
-
-orb_self.i: orb_self.cpp.i
-.PHONY : orb_self.i
-
-# target to preprocess a source file
-orb_self.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/orb_self.dir/build.make CMakeFiles/orb_self.dir/orb_self.cpp.i
-.PHONY : orb_self.cpp.i
-
-orb_self.s: orb_self.cpp.s
-.PHONY : orb_self.s
-
-# target to generate assembly for a file
-orb_self.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/orb_self.dir/build.make CMakeFiles/orb_self.dir/orb_self.cpp.s
-.PHONY : orb_self.cpp.s
-
-pose_estimation_2d2d.o: pose_estimation_2d2d.cpp.o
-.PHONY : pose_estimation_2d2d.o
-
-# target to build an object file
-pose_estimation_2d2d.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pose_estimation_2d2d.dir/build.make CMakeFiles/pose_estimation_2d2d.dir/pose_estimation_2d2d.cpp.o
-.PHONY : pose_estimation_2d2d.cpp.o
-
-pose_estimation_2d2d.i: pose_estimation_2d2d.cpp.i
-.PHONY : pose_estimation_2d2d.i
-
-# target to preprocess a source file
-pose_estimation_2d2d.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pose_estimation_2d2d.dir/build.make CMakeFiles/pose_estimation_2d2d.dir/pose_estimation_2d2d.cpp.i
-.PHONY : pose_estimation_2d2d.cpp.i
-
-pose_estimation_2d2d.s: pose_estimation_2d2d.cpp.s
-.PHONY : pose_estimation_2d2d.s
-
-# target to generate assembly for a file
-pose_estimation_2d2d.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pose_estimation_2d2d.dir/build.make CMakeFiles/pose_estimation_2d2d.dir/pose_estimation_2d2d.cpp.s
-.PHONY : pose_estimation_2d2d.cpp.s
-
-pose_estimation_3d2d.o: pose_estimation_3d2d.cpp.o
-.PHONY : pose_estimation_3d2d.o
-
-# target to build an object file
-pose_estimation_3d2d.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pose_estimation_3d2d.dir/build.make CMakeFiles/pose_estimation_3d2d.dir/pose_estimation_3d2d.cpp.o
-.PHONY : pose_estimation_3d2d.cpp.o
-
-pose_estimation_3d2d.i: pose_estimation_3d2d.cpp.i
-.PHONY : pose_estimation_3d2d.i
-
-# target to preprocess a source file
-pose_estimation_3d2d.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pose_estimation_3d2d.dir/build.make CMakeFiles/pose_estimation_3d2d.dir/pose_estimation_3d2d.cpp.i
-.PHONY : pose_estimation_3d2d.cpp.i
-
-pose_estimation_3d2d.s: pose_estimation_3d2d.cpp.s
-.PHONY : pose_estimation_3d2d.s
-
-# target to generate assembly for a file
-pose_estimation_3d2d.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pose_estimation_3d2d.dir/build.make CMakeFiles/pose_estimation_3d2d.dir/pose_estimation_3d2d.cpp.s
-.PHONY : pose_estimation_3d2d.cpp.s
-
-pose_estimation_3d3d.o: pose_estimation_3d3d.cpp.o
-.PHONY : pose_estimation_3d3d.o
-
-# target to build an object file
-pose_estimation_3d3d.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pose_estimation_3d3d.dir/build.make CMakeFiles/pose_estimation_3d3d.dir/pose_estimation_3d3d.cpp.o
-.PHONY : pose_estimation_3d3d.cpp.o
-
-pose_estimation_3d3d.i: pose_estimation_3d3d.cpp.i
-.PHONY : pose_estimation_3d3d.i
-
-# target to preprocess a source file
-pose_estimation_3d3d.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pose_estimation_3d3d.dir/build.make CMakeFiles/pose_estimation_3d3d.dir/pose_estimation_3d3d.cpp.i
-.PHONY : pose_estimation_3d3d.cpp.i
-
-pose_estimation_3d3d.s: pose_estimation_3d3d.cpp.s
-.PHONY : pose_estimation_3d3d.s
-
-# target to generate assembly for a file
-pose_estimation_3d3d.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pose_estimation_3d3d.dir/build.make CMakeFiles/pose_estimation_3d3d.dir/pose_estimation_3d3d.cpp.s
-.PHONY : pose_estimation_3d3d.cpp.s
-
-triangulation.o: triangulation.cpp.o
-.PHONY : triangulation.o
-
-# target to build an object file
-triangulation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/triangulation.dir/build.make CMakeFiles/triangulation.dir/triangulation.cpp.o
-.PHONY : triangulation.cpp.o
-
-triangulation.i: triangulation.cpp.i
-.PHONY : triangulation.i
-
-# target to preprocess a source file
-triangulation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/triangulation.dir/build.make CMakeFiles/triangulation.dir/triangulation.cpp.i
-.PHONY : triangulation.cpp.i
-
-triangulation.s: triangulation.cpp.s
-.PHONY : triangulation.s
-
-# target to generate assembly for a file
-triangulation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/triangulation.dir/build.make CMakeFiles/triangulation.dir/triangulation.cpp.s
-.PHONY : triangulation.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -347,29 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... orb_cv"
-	@echo "... orb_self"
-	@echo "... pose_estimation_2d2d"
-	@echo "... pose_estimation_3d2d"
-	@echo "... pose_estimation_3d3d"
-	@echo "... triangulation"
 	@echo "... orb_cv.o"
 	@echo "... orb_cv.i"
 	@echo "... orb_cv.s"
-	@echo "... orb_self.o"
-	@echo "... orb_self.i"
-	@echo "... orb_self.s"
-	@echo "... pose_estimation_2d2d.o"
-	@echo "... pose_estimation_2d2d.i"
-	@echo "... pose_estimation_2d2d.s"
-	@echo "... pose_estimation_3d2d.o"
-	@echo "... pose_estimation_3d2d.i"
-	@echo "... pose_estimation_3d2d.s"
-	@echo "... pose_estimation_3d3d.o"
-	@echo "... pose_estimation_3d3d.i"
-	@echo "... pose_estimation_3d3d.s"
-	@echo "... triangulation.o"
-	@echo "... triangulation.i"
-	@echo "... triangulation.s"
 .PHONY : help
 
 
