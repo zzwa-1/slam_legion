@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/zzwa/sjtu/slam_legion/ch7/build
 
 # The main recursive "all" target.
 all: CMakeFiles/orb_cv.dir/all
+all: CMakeFiles/orb_self.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,6 +73,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/orb_cv.dir/clean
+clean: CMakeFiles/orb_self.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -99,6 +101,32 @@ orb_cv: CMakeFiles/orb_cv.dir/rule
 CMakeFiles/orb_cv.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/orb_cv.dir/build.make CMakeFiles/orb_cv.dir/clean
 .PHONY : CMakeFiles/orb_cv.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/orb_self.dir
+
+# All Build rule for target.
+CMakeFiles/orb_self.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/orb_self.dir/build.make CMakeFiles/orb_self.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/orb_self.dir/build.make CMakeFiles/orb_self.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zzwa/sjtu/slam_legion/ch7/build/CMakeFiles --progress-num=3,4 "Built target orb_self"
+.PHONY : CMakeFiles/orb_self.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/orb_self.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zzwa/sjtu/slam_legion/ch7/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/orb_self.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zzwa/sjtu/slam_legion/ch7/build/CMakeFiles 0
+.PHONY : CMakeFiles/orb_self.dir/rule
+
+# Convenience name for target.
+orb_self: CMakeFiles/orb_self.dir/rule
+.PHONY : orb_self
+
+# clean rule for target.
+CMakeFiles/orb_self.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/orb_self.dir/build.make CMakeFiles/orb_self.dir/clean
+.PHONY : CMakeFiles/orb_self.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

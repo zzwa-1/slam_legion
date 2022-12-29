@@ -10,11 +10,11 @@
 using namespace std;
 
 // global variables
-string first_file = "./1.png";
-string second_file = "./2.png";
+string first_file = "/home/zzwa/sjtu/slam_legion/ch7/1.png";
+string second_file = "/home/zzwa/sjtu/slam_legion/ch7/2.png";
 
 // 32 bit unsigned int, will have 8, 8x32=256
-typedef vector<uint32_t> DescType; // Descriptor type
+typedef vector<uint32_t> DescType; // Descriptor type 用于存储描述子
 
 /**
  * compute descriptor of orb keypoints
@@ -25,7 +25,7 @@ typedef vector<uint32_t> DescType; // Descriptor type
  * NOTE: if a keypoint goes outside the image boundary (8 pixels), descriptors will not be computed and will be left as
  * empty
  */
-void ComputeORB(const cv::Mat &img, vector<cv::KeyPoint> &keypoints, vector<DescType> &descriptors);
+void ComputeORB(const cv::Mat &img, vector<cv::KeyPoint> &keypoints, vector<DescType> &descriptors);  //提取图像特征，计算描述子
 
 /**
  * brute-force match two sets of descriptors
@@ -33,27 +33,27 @@ void ComputeORB(const cv::Mat &img, vector<cv::KeyPoint> &keypoints, vector<Desc
  * @param desc2 the second descriptor
  * @param matches matches of two images
  */
-void BfMatch(const vector<DescType> &desc1, const vector<DescType> &desc2, vector<cv::DMatch> &matches);
+void BfMatch(const vector<DescType> &desc1, const vector<DescType> &desc2, vector<cv::DMatch> &matches); //输入两个描述子进行匹配
 
 int main(int argc, char **argv) {
 
   // load image
   cv::Mat first_image = cv::imread(first_file, 0);
-  cv::Mat second_image = cv::imread(second_file, 0);
+  cv::Mat second_image = cv::imread(second_file, 0);//输入两张图片
   assert(first_image.data != nullptr && second_image.data != nullptr);
 
   // detect FAST keypoints1 using threshold=40
   chrono::steady_clock::time_point t1 = chrono::steady_clock::now();
-  vector<cv::KeyPoint> keypoints1;
-  cv::FAST(first_image, keypoints1, 40);
-  vector<DescType> descriptor1;
-  ComputeORB(first_image, keypoints1, descriptor1);
+  vector<cv::KeyPoint> keypoints1;  //用于存储图像1的关键点
+  cv::FAST(first_image, keypoints1, 40);  //40表示设定的一个灰度阈值
+  vector<DescType> descriptor1;  //用于存储图像1的描述子
+  ComputeORB(first_image, keypoints1, descriptor1);  //计算图像1的描述子
 
   // same for the second
   vector<cv::KeyPoint> keypoints2;
   vector<DescType> descriptor2;
   cv::FAST(second_image, keypoints2, 40);
-  ComputeORB(second_image, keypoints2, descriptor2);
+  ComputeORB(second_image, keypoints2, descriptor2);  //计算第二张图片的描述子
   chrono::steady_clock::time_point t2 = chrono::steady_clock::now();
   chrono::duration<double> time_used = chrono::duration_cast<chrono::duration<double>>(t2 - t1);
   cout << "extract ORB cost = " << time_used.count() << " seconds. " << endl;
@@ -61,15 +61,15 @@ int main(int argc, char **argv) {
   // find matches
   vector<cv::DMatch> matches;
   t1 = chrono::steady_clock::now();
-  BfMatch(descriptor1, descriptor2, matches);
+  BfMatch(descriptor1, descriptor2, matches);  //调用BfMatch函数，进行特征匹配
   t2 = chrono::steady_clock::now();
   time_used = chrono::duration_cast<chrono::duration<double>>(t2 - t1);
   cout << "match ORB cost = " << time_used.count() << " seconds. " << endl;
-  cout << "matches: " << matches.size() << endl;
+  cout << "matches: " << matches.size() << endl;  //输出匹配点数量
 
   // plot the matches
   cv::Mat image_show;
-  cv::drawMatches(first_image, keypoints1, second_image, keypoints2, matches, image_show);
+  cv::drawMatches(first_image, keypoints1, second_image, keypoints2, matches, image_show);  //绘制匹配后的图像
   cv::imshow("matches", image_show);
   cv::imwrite("matches.png", image_show);
   cv::waitKey(0);
@@ -80,6 +80,7 @@ int main(int argc, char **argv) {
 
 // -------------------------------------------------------------------------------------------------- //
 // ORB pattern
+//确定二进制描述子每一位上是0还是1时，两个像素点的选择；32*32图象块
 int ORB_pattern[256 * 4] = {
   8, -3, 9, 5/*mean (0), correlation (0)*/,
   4, 2, 7, -12/*mean (1.12461e-05), correlation (0.0437584)*/,
@@ -341,10 +342,10 @@ int ORB_pattern[256 * 4] = {
 
 // compute the descriptor
 void ComputeORB(const cv::Mat &img, vector<cv::KeyPoint> &keypoints, vector<DescType> &descriptors) {
-  const int half_patch_size = 8;
-  const int half_boundary = 16;
-  int bad_points = 0;
-  for (auto &kp: keypoints) {
+  const int half_patch_size = 8;//计算特征点方向时，选取的图象块16*16
+  const int half_boundary = 16;  //计算描述子时在32*32的图像块中选点
+  int bad_points = 0;  //计算描述子时，在32*32的区域块选择两个点比较，所选择的点超出图像范围的。出现这种情况下的FAST角点的数目。
+  for (auto &kp: keypoints) { //看有没有超出边界的特征点，不使用
     if (kp.pt.x < half_boundary || kp.pt.y < half_boundary ||
         kp.pt.x >= img.cols - half_boundary || kp.pt.y >= img.rows - half_boundary) {
       // outside
@@ -352,7 +353,8 @@ void ComputeORB(const cv::Mat &img, vector<cv::KeyPoint> &keypoints, vector<Desc
       descriptors.push_back({});
       continue;
     }
-
+    //计算16*16图像块的灰度质心
+    //可参照下面的图片帮助理解
     float m01 = 0, m10 = 0;
     for (int dx = -half_patch_size; dx < half_patch_size; ++dx) {
       for (int dy = -half_patch_size; dy < half_patch_size; ++dy) {

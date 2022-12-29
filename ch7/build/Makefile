@@ -129,6 +129,19 @@ orb_cv/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/orb_cv.dir/build.make CMakeFiles/orb_cv.dir/build
 .PHONY : orb_cv/fast
 
+#=============================================================================
+# Target rules for targets named orb_self
+
+# Build rule for target.
+orb_self: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 orb_self
+.PHONY : orb_self
+
+# fast build rule for target.
+orb_self/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/orb_self.dir/build.make CMakeFiles/orb_self.dir/build
+.PHONY : orb_self/fast
+
 orb_cv.o: orb_cv.cpp.o
 .PHONY : orb_cv.o
 
@@ -153,6 +166,30 @@ orb_cv.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/orb_cv.dir/build.make CMakeFiles/orb_cv.dir/orb_cv.cpp.s
 .PHONY : orb_cv.cpp.s
 
+orb_self.o: orb_self.cpp.o
+.PHONY : orb_self.o
+
+# target to build an object file
+orb_self.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/orb_self.dir/build.make CMakeFiles/orb_self.dir/orb_self.cpp.o
+.PHONY : orb_self.cpp.o
+
+orb_self.i: orb_self.cpp.i
+.PHONY : orb_self.i
+
+# target to preprocess a source file
+orb_self.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/orb_self.dir/build.make CMakeFiles/orb_self.dir/orb_self.cpp.i
+.PHONY : orb_self.cpp.i
+
+orb_self.s: orb_self.cpp.s
+.PHONY : orb_self.s
+
+# target to generate assembly for a file
+orb_self.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/orb_self.dir/build.make CMakeFiles/orb_self.dir/orb_self.cpp.s
+.PHONY : orb_self.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +199,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... orb_cv"
+	@echo "... orb_self"
 	@echo "... orb_cv.o"
 	@echo "... orb_cv.i"
 	@echo "... orb_cv.s"
+	@echo "... orb_self.o"
+	@echo "... orb_self.i"
+	@echo "... orb_self.s"
 .PHONY : help
 
 
